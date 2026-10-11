@@ -84,6 +84,22 @@ Built against a conversion checklist drawn from top-performing HVAC sites:
 - [x] License, insurance and trade affiliations shown
 - [x] 24/7 emergency dispatch messaging
 
+## Production stack
+
+This concept is hand-coded in plain HTML, CSS and vanilla JavaScript so it loads fast and runs anywhere with no build step. For a real client launch, this is the stack I would use, chosen for a data-rich commercial site with robust forms, file uploads and room to grow into a client portal.
+
+| Layer | Choice | Why |
+|---|---|---|
+| Framework | [Next.js](https://nextjs.org) (App Router) | Server rendering, API routes for forms and a path to a client portal |
+| Styling | [Tailwind CSS](https://tailwindcss.com) | The Swiss-grid system, mono labels and signal-orange accent as tokens |
+| Components | [shadcn/ui](https://ui.shadcn.com) on [Radix UI](https://www.radix-ui.com) | Accessible tabs, dialogs, tables and form controls, fully restyled |
+| Animation | [Motion](https://motion.dev) | Count-up figures, marquee, project strip and filter transitions |
+| Forms | [React Hook Form](https://react-hook-form.com) + [Zod](https://zod.dev) | Validated bid and service requests with typed schemas |
+| File uploads | [UploadThing](https://uploadthing.com) or S3 | Drawing sets (PDF, DWG, RVT) attached to bid inquiries |
+| Content editing | [Payload CMS](https://payloadcms.com) | Projects, capabilities and service plans managed inside the Next.js app |
+| Integrations | ServiceTitan / Housecall Pro API | Service requests flow straight into the dispatch board |
+| Hosting | [Vercel](https://vercel.com) | Edge network, preview deployments, serverless form handling |
+
 ## Run locally
 
 No build step or dependencies are needed. Serve the folder with any static server:
